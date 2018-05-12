@@ -1,6 +1,5 @@
 # Casper SJ 
 > Forked from [Hungys](https://github.com/hungys/CasperS)'s [CasperS](https://github.com/hungys/CasperS)
-========
 
 ## Intro
 A Reivised [Casper theme](https://github.com/TryGhost/Casper) for [My Ghost Blog](https://sujinlee.me/)
@@ -15,7 +14,7 @@ A Reivised [Casper theme](https://github.com/TryGhost/Casper) for [My Ghost Blog
     * Revised [xonokai.css](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-xonokai.css)
 * Social links with [Simple Icons](https://simpleicons.org) integration
 * [KaTex](https://khan.github.io/KaTeX/) integration
-* Korean Font ['Spoaq-han-sans](https://spoqa.github.io/spoqa-han-sans/ko-KR/) intergration
+* Korean Font [Spoaq-han-sans](https://spoqa.github.io/spoqa-han-sans/ko-KR/) intergration
 
 ## How to develop your own theme
 * Install (local / dev) as following [ghost official docs](https://docs.ghost.org/docs/install-local)
