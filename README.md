@@ -17,7 +17,7 @@ A Reivised [Casper theme](https://github.com/TryGhost/Casper) for [My Ghost Blog
 * Korean Font [Spoaq-han-sans](https://spoqa.github.io/spoqa-han-sans/ko-KR/) intergration
 
 ## How to develop your own theme
-* Install (local / dev) as following [ghost official docs](https://docs.ghost.org/docs/install-local)
+* Install ghost as following [ghost official docs - install - local](https://docs.ghost.org/docs/install-local)
 ```
 // Install Ghost-CLI
 $ yarn global add ghost-cli@latest
@@ -36,7 +36,7 @@ $ yarn add -g gulp
 
 * Clone or download the content of repo and put them in `content/themes/` folder under your Ghost installation.
 ```
-$ cd /your-ghost-root-directory
+$ cd /[your-ghost-root-directory]
 $ git clone https://github.com/sujinleeme/CasperSJ.git content/themes/CasperSJ
 ```
 
@@ -45,20 +45,23 @@ $ git clone https://github.com/sujinleeme/CasperSJ.git content/themes/CasperSJ
 $ yarn add
 ```
 
+* To complie css/js run gulp.
+```
+$ cd /[your-ghost-root-directory]/content/themes/casperSJ
+$ yarn dev
+```
+
 * Start Ghost with nodemon.
 ```
+cd /[your-ghost-root-directory]
 $ nodemon current/index.js --watch content/themes/casperSJ --ext hbs,js,css
 ```
 
 * Open http://localhost:2368/
 
-* To complie css/js run gulp.
-```
-$ yarn dev
-```
-
 * Make `.zip` folder into ` dist/<theme-name>.zip`, which you can then upload to your site.
 ```
+$ cd /[your-ghost-root-directory]/content/themes/casperSJ
 $ yarn zip
 ```
 
