@@ -1,11 +1,11 @@
-# Casper SJ 
+# 👻 Casper SJ 
 > Forked from [Hungys](https://github.com/hungys/CasperS)'s [CasperS](https://github.com/hungys/CasperS)
 
 ## Intro
-A Reivised [Casper theme](https://github.com/TryGhost/Casper) for [My Ghost Blog](https://sujinlee.me/)
+* A reivised [Casper theme](https://github.com/TryGhost/Casper) for [My Ghost Blog](https://sujinlee.me/)
+* The personal blogging theme
 
-### Features
-
+## Features
 * Vanilla Casper 2.1.1 style
 * Works with Ghost 1.2+
 * [Google Analytics](http://analytics.google.com) integration
@@ -13,8 +13,16 @@ A Reivised [Casper theme](https://github.com/TryGhost/Casper) for [My Ghost Blog
 * [Prism](http://prismjs.com)-powered syntax highlight
     * Revised [xonokai.css](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-xonokai.css)
 * Social links with [Simple Icons](https://simpleicons.org) integration
-* [KaTex](https://khan.github.io/KaTeX/) integration
-* Korean Font [Spoaq-han-sans](https://spoqa.github.io/spoqa-han-sans/ko-KR/) intergration
+* [KaTex](https://khan.github.io/KaTeX/) 
+* Korean Font [Spoaq-han-sans](https://spoqa.github.io/spoqa-han-sans/ko-KR/)
+
+
+## How to install theme in your Ghost
+* Clone or download the content of repo and put them in `content/themes/` folder under your Ghost installation.
+```
+$ cd /[your-ghost-root-directory]
+$ git clone https://github.com/sujinleeme/CasperSJ.git content/themes/CasperSJ
+```
 
 ## How to develop your own theme
 * Install ghost as following [ghost official docs - install - local](https://docs.ghost.org/docs/install-local)
@@ -45,7 +53,7 @@ $ git clone https://github.com/sujinleeme/CasperSJ.git content/themes/CasperSJ
 $ yarn add
 ```
 
-* To complie css/js run gulp.
+* To complie `css`/`js` run gulp.
 ```
 $ cd /[your-ghost-root-directory]/content/themes/casperSJ
 $ yarn dev
@@ -65,7 +73,14 @@ $ cd /[your-ghost-root-directory]/content/themes/casperSJ
 $ yarn zip
 ```
 
-# Configuration
+## How to write
+* Math
+    * use `$$` delimiters a string which starts the math expression and ends.
+```
+Mass-energy relation is $E= MC^2$.
+```
+
+## Configuration
 
 You can configure for Google Analytics, Disqus, and social links using Ghost's **Code Injection** feature. Just paste the following example to **Blog Header** section and fill in your information.
 
@@ -77,7 +92,7 @@ var social_link = {
     'linkedin': 'https://www.linkedin.com/in/username',
     'github': 'https://github.com/username',
     'medium': 'https://medium.com/@userid',
-    'casper-local': 'https://github.com/hungys/CasperS'
+    'casper-local': 'https://github.com/username'
 }
 </script>
 ```
