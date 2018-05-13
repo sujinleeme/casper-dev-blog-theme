@@ -70,6 +70,7 @@ into the {body} of the default.hbs template --}}
             </footer>
 
             {{!-- Disqus --}}
+            <footer class="post-full-footer">
             <section class="post-full-comments">
                 <div id="disqus_thread"></div>
                 <script>
@@ -80,13 +81,14 @@ into the {body} of the default.hbs template --}}
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
-                            s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                            s.src = 'https://' + window.disqus_shortname + '.disqus.com/embed.js';
                             s.setAttribute('data-timestamp', +new Date());
                             (d.head || d.body).appendChild(s);
                         })();
                     }
                 </script>
             </section>
+            </footer>
 
 
         </article>
