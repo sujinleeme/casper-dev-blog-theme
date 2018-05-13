@@ -25,7 +25,7 @@ $ git clone https://github.com/sujinleeme/CasperSJ.git content/themes/CasperSJ
 ```
 
 ## How to develop your own theme
-* Install ghost as following [ghost official docs - install - local](https://docs.ghost.org/docs/install-local)
+* Install Ghost as following [ghost official docs(install - local)](https://docs.ghost.org/docs/install-local) steps.
 ```
 // Install Ghost-CLI
 $ yarn global add ghost-cli@latest
@@ -48,12 +48,12 @@ $ cd /[your-ghost-root-directory]
 $ git clone https://github.com/sujinleeme/CasperSJ.git content/themes/CasperSJ
 ```
 
-* Install all packages
+* Install all dependencies.
 ```
 $ yarn add
 ```
 
-* To complie `css`/`js` run gulp.
+* To complie `css`/`js` run `yarn dev`.
 ```
 $ cd /[your-ghost-root-directory]/content/themes/casperSJ
 $ yarn dev
@@ -67,15 +67,18 @@ $ nodemon current/index.js --watch content/themes/casperSJ --ext hbs,js,css
 
 * Open http://localhost:2368/
 
+* Customize theme.
+
 * Make `.zip` folder into ` dist/<theme-name>.zip`, which you can then upload to your site.
 ```
 $ cd /[your-ghost-root-directory]/content/themes/casperSJ
 $ yarn zip
 ```
 
-## How to write
+## How to use markdown editor
+* [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
 * Math
-    * use `$$` delimiters a string which starts the math expression and ends.
+    * Use `$$` delimiters a string which starts the math expression and ends.
 ```
 Mass-energy relation is $E= MC^2$.
 ```
