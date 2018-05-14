@@ -78,7 +78,7 @@ $ yarn zip
 ## How to use markdown editor
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
 * Math
-    * Use `$$` delimiters a string which starts the math expression and ends.
+    * Use `$` delimiters a string which starts the math expression and ends.
 ```
 Mass-energy relation is $E= MC^2$.
 ```
