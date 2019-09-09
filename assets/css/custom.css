@@ -22,6 +22,10 @@
   font-family: "Noto Serif KR", serif;
 }
 
+.post-full-header {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 /* article */
 .post-full-content h1,
 .post-full-content h2,
@@ -45,6 +49,7 @@
   letter-spacing: 0px;
 }
 
+.floating-header-logo a,
 .floating-header-title {
   line-height: 1.65em;
 }

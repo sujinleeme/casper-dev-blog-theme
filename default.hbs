@@ -15,18 +15,20 @@
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost-head}}
 
     {{!-- fonts --}}
     {{> custom-fonts}}
 
-    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
-    {{ghost-head}}
+    {{!-- Prism syntax highlighter --}}
+    {{> prism}}
 
     {{!-- Katex --}}
     {{> katex}}
 
-    {{!-- Prism syntax highlighter --}}
-    {{> prism}}
+    {{!-- Google Analytics --}}
+    {{> google-analytics}}
 
 </head>
 
@@ -82,8 +84,6 @@
         })
     </script>
 
-    {{!-- Google Analytics --}}
-    {{> google-analytics}}
 
     {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
