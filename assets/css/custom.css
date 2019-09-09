@@ -3,6 +3,11 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 
+/* site nav 8 */
+.site-nav {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 /* post card */
 .post-card-header,
 .post-card-meta {
@@ -31,7 +36,28 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 
+/* floating-header */
+.floating-header {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.floating-header-logo {
+  letter-spacing: 0px;
+}
+
+.floating-header-title {
+  line-height: 1.65em;
+}
+
+.floating-header-share-label {
+  display: none;
+}
+
 /* footer */
 .site-footer {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.read-next-feed {
   font-family: "Noto Sans KR", sans-serif;
 }
