@@ -1,113 +1,66 @@
-# 👻 Casper SJ 
-> Forked from [Hungys](https://github.com/hungys/CasperS)'s [CasperS](https://github.com/hungys/CasperS)
+# Casper
 
-## Intro
-* A reivised [Casper theme](https://github.com/TryGhost/Casper) for [My Ghost Blog](https://sujinlee.me/)
-* The personal blogging theme
+The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
 
-## Features
-* Vanilla Casper 2.1.1 style
-* Works with Ghost 1.2+
-* [Google Analytics](http://analytics.google.com) integration
-* [Disqus](https://disqus.com) integration
-* [Prism](http://prismjs.com)-powered syntax highlight
-    * Revised [xonokai.css](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-xonokai.css)
-* Social links with [Simple Icons](https://simpleicons.org) integration
-* [KaTex](https://khan.github.io/KaTeX/) 
-* Korean Font [Spoaq-han-sans](https://spoqa.github.io/spoqa-han-sans/ko-KR/)
+&nbsp;
+
+![screenshot-desktop](https://user-images.githubusercontent.com/120485/27221326-1e31d326-5280-11e7-866d-82d550a7683b.jpg)
+
+&nbsp;
+
+# First time using a Ghost theme?
+
+Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
+
+We've documented our default theme pretty heavily so that it should be fairly easy to work out what's going on just by reading the code and the comments. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://ghost.org/docs/api/handlebars-themes/) which explains every possible Handlebars helper and template.
+
+**The main files are:**
+
+- `default.hbs` - The main template file
+- `index.hbs` - Used for the home page
+- `post.hbs` - Used for individual posts
+- `page.hbs` - Used for individual pages
+- `tag.hbs` - Used for tag archives
+- `author.hbs` - Used for author archives
+
+One really neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
+
+- `page-about.hbs` - Custom template for the `/about/` page
+- `tag-news.hbs` - Custom template for `/tag/news/` archive
+- `author-ali.hbs` - Custom template for `/author/ali/` archive
 
 
-## How to install theme in your Ghost
-* Clone or download the content of repo and put them in `content/themes/` folder under your Ghost installation.
-```
-$ cd /[your-ghost-root-directory]
-$ git clone https://github.com/sujinleeme/CasperSJ.git content/themes/CasperSJ
-```
+# Development
 
-## How to develop your own theme
-* Install Ghost as following [ghost official docs(install - local)](https://docs.ghost.org/docs/install-local) steps.
-```
-// Install Ghost-CLI
-$ yarn global add ghost-cli@latest
+Casper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
 
-// Install Ghost
-$ cd /your-ghost-root-directory
-$ ghost install local
-
-// Stop Ghost
-ghost stop
-
-// install nodemon and gulp globally
-$ yarn add -g nodemon@latest
-$ yarn add -g gulp
-```
-
-* Clone or download the content of repo and put them in `content/themes/` folder under your Ghost installation.
-```
-$ cd /[your-ghost-root-directory]
-$ git clone https://github.com/sujinleeme/CasperSJ.git content/themes/CasperSJ
-```
-
-* Install all dependencies.
-```
-$ yarn add
-```
-
-* To complie `css`/`js` run `yarn dev`.
-```
-$ cd /[your-ghost-root-directory]/content/themes/casperSJ
+```bash
+$ yarn install
 $ yarn dev
 ```
 
-* Start Ghost with nodemon.
-```
-cd /[your-ghost-root-directory]
-$ nodemon current/index.js --watch content/themes/casperSJ --ext hbs,js,css
-```
+Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
 
-* Open http://localhost:2368/
+The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
 
-* Customize theme.
-
-* Make `.zip` folder into ` dist/<theme-name>.zip`, which you can then upload to your site.
-```
-$ cd /[your-ghost-root-directory]/content/themes/casperSJ
+```bash
 $ yarn zip
 ```
 
-## How to use markdown editor
-* [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
-* Math
-    * Use `$` delimiters a string which starts the math expression and ends.
-```
-Mass-energy relation is $E= MC^2$.
-```
+# PostCSS Features Used
 
-## Configuration
+- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
+- Variables - Simple pure CSS variables
+- [Color Function](https://github.com/postcss/postcss-color-function)
 
-You can configure for Google Analytics, Disqus, and social links using Ghost's **Code Injection** feature. Just paste the following example to **Blog Header** section and fill in your information.
 
-```html
-<script>
-var ga_id = 'UA-xxxxxxxx-x';
-var disqus_shortname = 'your-shortname'
-var social_link = {
-    'linkedin': 'https://www.linkedin.com/in/username',
-    'github': 'https://github.com/username',
-    'medium': 'https://medium.com/@userid',
-    'casper-local': 'https://github.com/username'
-}
-</script>
-```
+# SVG Icons
 
-For social links, we provide icons for 20 popular services (check the following list). For this kind of services including `'linkedin'` and `'github'`, the icons will be loaded from your website directly. For other services such as `'medium'`, the icons will be loaded from [simpleicons.org](https://simpleicons.org), and you can check the full list on their website and [GitHub](https://github.com/simple-icons/simple-icons/tree/develop/icons). You can also use your custom SVG icons by attaching `-local` suffix to the key, for exmaple, `casper.svg` will be loaded for key `'casper-local'`, and you should prepare the icon and put it under `assets/icons/`.
+Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
 
-```
-'500px', 'facebook', 'flickr', 'github', 'gmail', 'googleplus', 'instagram', 'line', 'linkedin', 'messenger', 'microsoftoutlook', 'plurk', 'sinaweibo', 'skype', 'snapchat', 'stackoverflow', 'telegram', 'twitter', 'wechat', 'whatsapp'
-```
+You can add your own SVG icons in the same manner.
+
 
 # Copyright & License
 
-Released under the [MIT License](LICENSE).
-
-Copyright (c) 2013-2017 Ghost Foundation (for Casper theme)
+Copyright (c) 2013-2019 Ghost Foundation - Released under the [MIT license](LICENSE).

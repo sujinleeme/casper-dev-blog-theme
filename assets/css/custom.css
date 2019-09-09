@@ -1,0 +1,37 @@
+/* site name */
+.site-header-content {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* post card */
+.post-card-header,
+.post-card-meta {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.post-card-excerpt {
+  font-family: "Noto Serif KR", serif;
+}
+
+.post-full-content {
+  font-family: "Noto Serif KR", serif;
+}
+
+/* article */
+.post-full-content h1,
+.post-full-content h2,
+.post-full-content h3,
+.post-full-content h4,
+.post-full-content h5,
+.post-full-content h6 {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.post-full-title {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* footer */
+.site-footer {
+  font-family: "Noto Sans KR", sans-serif;
+}
