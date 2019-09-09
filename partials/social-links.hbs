@@ -1,0 +1,24 @@
+<script>
+  if (window.social_link) {
+    var url_regexp = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+    $.each(window.social_link, function (type, url) {
+      if (typeof url === "string" && url_regexp.test(url)) {
+        $('<a>', {
+          class: 'social-link social-link-' + type,
+          href: url,
+          target: '_blank'
+        }).appendTo('.social-links');
+        var builtin_type = ['500px', 'facebook', 'flickr', 'github', 'gmail', 'googleplus', 'instagram', 'line', 'linkedin', 'messenger', 'microsoftoutlook', 'plurk', 'sinaweibo', 'skype', 'snapchat', 'stackoverflow', 'telegram', 'twitter', 'wechat', 'whatsapp'];
+        var icon_path = '{{asset "icons/type.svg"}}'
+        if (builtin_type.indexOf(type) > -1) {
+          icon_path = icon_path.replace('type', type);
+        } else if (type.endsWith('-local')) {
+          icon_path = icon_path.replace('type', type.substring(0, type.length - 6));
+        } else {
+          icon_path = 'https://simpleicons.org/icons/' + type + '.svg';
+        }
+        $('.social-link-' + type).load(icon_path);
+      }
+    });
+  }
+</script>

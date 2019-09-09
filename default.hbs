@@ -50,7 +50,6 @@
                         rel="noopener">Facebook</a>{{/if}}
                     {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank"
                         rel="noopener">Twitter</a>{{/if}}
-                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
                 </nav>
             </div>
         </footer>
@@ -84,7 +83,8 @@
         })
     </script>
 
-
+    <script>
+    </script>
     {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
@@ -98,6 +98,10 @@
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
+
+    {{!-- Social links --}}
+    {{> social-links}}
+
 
 </body>
 
