@@ -2,6 +2,8 @@
 
 > Inspired from Hungys's [CasperS](https://github.com/hungys/CasperS)
 
+This repo is customized casper theme for my ghost dev blog. Currently, it lives on [sujinlee.me](https://sujinlee.me/).
+
 - [Vanilla Casper 2.11.1 style](https://github.com/TryGhost/Casper)
 - Works with Ghost 2+
 - Google Analytics integration
