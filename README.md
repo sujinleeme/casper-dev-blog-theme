@@ -1,4 +1,4 @@
-# Customized casper theme(ghost) for developer's personal blog
+# Customized ghost casper theme for developer's blog
 
 > Inspired from Hungys's [CasperS](https://github.com/hungys/CasperS)
 
@@ -15,11 +15,11 @@ This repo is customized casper theme for my ghost dev blog. Currently, it lives 
 
 ## How to install theme in your live ghost
 
-- Download this repo `zip` file.
+- Download this repo as `zip` file.
 - Go to your desgin panel in ghost admin page (https://<ghost-blog-url>/ghost/#/settings/design)
 - Click `Upload a theme` button and upload zip file.
-- Activate new theme
-- Go to code injection panel (https://<ghost-blog-url>/ghost/#/settings/code-injection)
+- Activate new theme.
+- Go to code injection panel. (https://<ghost-blog-url>/ghost/#/settings/code-injection)
 - Update google analytics variable in **Site Header** code block.
 
 ```html
@@ -29,7 +29,7 @@ This repo is customized casper theme for my ghost dev blog. Currently, it lives 
 ```
 
 - Update social links and google analytics variables in **Site Footer** code block.
-  - Socials icons : facebook, flickr, github, gmail, googleplus', instagram, line, linkedin, messenger, microsoftoutlook, plurk, sinaweibo, skype, snapchat, stackoverflow, telegram, twitter, wechat, whatsapp
+  - Social icons : facebook, flickr, github, gmail, googleplus', instagram, line, linkedin, messenger, microsoftoutlook, plurk, sinaweibo, skype, snapchat, stackoverflow, telegram, twitter, wechat, whatsapp
 
 ```html
 <script>
@@ -41,7 +41,7 @@ This repo is customized casper theme for my ghost dev blog. Currently, it lives 
 </script>
 ```
 
-- Update your disqus shortname in **Site Footer**
+- Update your disqus shortname in **Site Footer**.
 
 ```html
 <script>
@@ -62,12 +62,12 @@ This repo is customized casper theme for my ghost dev blog. Currently, it lives 
 
 ## How to customize casper theme
 
-- 한국어 블로그 (Korean)
+- 한국어 가이드 (Korean)
   - [뚝딱뚝딱 Ghost로 기술 블로그 만들기 - (1) 설치와 호스팅](https://sujinlee.me/how-to-build-ghost-blog/)
   - [뚝딱뚝딱 Ghost로 기술 블로그 만들기 - (2) 블로그 테마 수정하기](https://sujinlee.me/how-to-build-ghost-blog-2/)
 
-* Install ghost locally as following [official setup guide doc](https://ghost.org/docs/install/local/)
-* Clone or download the content of repo and put them in `content/themes/` folder under your Ghost installation.
+* Install ghost locally as following [official setup guide doc](https://ghost.org/docs/install/local/).
+* Clone or download repo and put them in `content/themes/` folder under your Ghost installation.
 
 ```
 $ cd /[your-ghost-root-directory]
