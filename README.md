@@ -1,4 +1,33 @@
-Site Footer
+# Customized casper theme(ghost) for developer's personal blog
+
+> Inspired from Hungys's [CasperS](https://github.com/hungys/CasperS)
+
+- [Vanilla Casper 2.11.1 style](https://github.com/TryGhost/Casper)
+- Works with Ghost 2+
+- Google Analytics integration
+- Disqus integration (comments, comment count)
+- Prism-powered syntax highlight
+- Revised xonokai.css
+- Social links with Simple Icons integration
+- KaTex
+
+## How to install theme in your live ghost
+
+- Download this repo `zip` file.
+- Go to your desgin panel in ghost admin page (https://<ghost-blog-url>/ghost/#/settings/design)
+- Click `Upload a theme` button and upload zip file.
+- Activate new theme
+- Go to code injection panel (https://<ghost-blog-url>/ghost/#/settings/code-injection)
+- Update google analytics variable in **Site Header** code block.
+
+```html
+<script>
+  var ga_id = "your_google_id"
+</script>
+```
+
+- Update social links and google analytics variables in **Site Footer** code block.
+  - Socials icons : facebook, flickr, github, gmail, googleplus', instagram, line, linkedin, messenger, microsoftoutlook, plurk, sinaweibo, skype, snapchat, stackoverflow, telegram, twitter, wechat, whatsapp
 
 ```html
 <script>
@@ -10,68 +39,40 @@ Site Footer
 </script>
 ```
 
-==========================================================
+- Update your disqus shortname in **Site Footer**
 
-# Casper
+```html
+<script>
+  var disqus_shortname = "sujinlee"
+</script>
+```
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
+## Katex usage
 
-&nbsp;
+- Use a pair of single(`$`)/double(`$$`) dollar sign as formula delimiter.
 
-![screenshot-desktop](https://user-images.githubusercontent.com/120485/27221326-1e31d326-5280-11e7-866d-82d550a7683b.jpg)
+![katex](https://sujinlee.me/content/images/2019/09/katex.png)
 
-&nbsp;
+## How to customize casper theme
 
-# First time using a Ghost theme?
+- 한국어 블로그 (Korean)
+  - [뚝딱뚝딱 Ghost로 기술 블로그 만들기 - (1) 설치와 호스팅](https://sujinlee.me/how-to-build-ghost-blog/)
+  - [뚝딱뚝딱 Ghost로 기술 블로그 만들기 - (2) 블로그 테마 수정하기](https://sujinlee.me/how-to-build-ghost-blog-2/)
 
-Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
+* Install ghost locally as following [official setup guide doc](https://ghost.org/docs/install/local/)
+* Clone or download the content of repo and put them in `content/themes/` folder under your Ghost installation.
 
-We've documented our default theme pretty heavily so that it should be fairly easy to work out what's going on just by reading the code and the comments. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://ghost.org/docs/api/handlebars-themes/) which explains every possible Handlebars helper and template.
+```
+$ cd /[your-ghost-root-directory]
+$ git clone https://github.com/sujinleeme/casper-dev-blog-theme.git content/themes/[theme-name]
+```
 
-**The main files are:**
+- Run `ghost start`.
+- Go to theme folder and install packages.
 
-- `default.hbs` - The main template file
-- `index.hbs` - Used for the home page
-- `post.hbs` - Used for individual posts
-- `page.hbs` - Used for individual pages
-- `tag.hbs` - Used for tag archives
-- `author.hbs` - Used for author archives
-
-One really neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
-
-- `page-about.hbs` - Custom template for the `/about/` page
-- `tag-news.hbs` - Custom template for `/tag/news/` archive
-- `author-ali.hbs` - Custom template for `/author/ali/` archive
-
-# Development
-
-Casper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
-
-```bash
+```
+$ cd content/themes/[theme-name]
 $ yarn install
-$ yarn dev
 ```
 
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
-
-The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
-
-```bash
-$ yarn zip
-```
-
-# PostCSS Features Used
-
-- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
-- Variables - Simple pure CSS variables
-- [Color Function](https://github.com/postcss/postcss-color-function)
-
-# SVG Icons
-
-Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
-
-You can add your own SVG icons in the same manner.
-
-# Copyright & License
-
-Copyright (c) 2013-2019 Ghost Foundation - Released under the [MIT license](LICENSE).
+- Run `yarn dev` and open localhost.
