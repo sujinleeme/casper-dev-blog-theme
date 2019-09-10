@@ -49,6 +49,11 @@ This repo is customized casper theme for my ghost dev blog. Currently, it lives 
 </script>
 ```
 
+## Disqus configuration
+
+- Create your disqus website.
+- [Customize comment count link text.](https://help.disqus.com/en/articles/1717274-adding-comment-count-links-to-your-home-page)
+
 ## Katex usage
 
 - Use a pair of single(`$`)/double(`$$`) dollar sign as formula delimiter.
