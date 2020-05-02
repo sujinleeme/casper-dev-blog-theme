@@ -4,14 +4,14 @@
 
 This repo is customized casper theme for my ghost dev blog. Currently, it lives on [sujinlee.me](https://sujinlee.me/).
 
-- [Vanilla Casper 2.11.1 style](https://github.com/TryGhost/Casper)
-- Works with Ghost 2+
+- [Casper 3](https://github.com/TryGhost/Casper)
+- Works with Ghost 3+
 - Google Analytics integration
 - Disqus integration (comments, comment count)
 - Prism-powered syntax highlight
-- Revised xonokai.css
-- Social links with Simple Icons integration
 - KaTex
+- Social links with Simple Icons integration (TBD)
+- LightMode / DarkMode
 
 ## How to install theme in your live ghost
 
@@ -82,4 +82,5 @@ $ cd content/themes/[theme-name]
 $ yarn install
 ```
 
-- Run `yarn dev` and open localhost.
+- Run `yarn dev` and open http://localhost:2368/.
+- Run `yarn zip` and upload zip file(in dist) to theme.

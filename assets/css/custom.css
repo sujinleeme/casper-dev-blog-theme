@@ -1,29 +1,36 @@
+@import "global.css";
+
 /* site name */
 .site-header-content {
-	font-family: "Noto Sans KR", sans-serif;
+	font-family: "Noto Sans KR";
 }
 
 /* site nav 8 */
 .site-nav {
-	font-family: "Noto Sans KR", sans-serif;
+	font-family: "Noto Sans KR";
 }
 
 /* post card */
 .post-card-header,
 .post-card-meta {
-	font-family: "Noto Sans KR", sans-serif;
+	font-family: "Noto Sans KR";
 }
 
-.post-card-excerpt {
-	font-family: "Noto Serif KR", serif;
+.post-card-excerpt, .post-full-custom-excerpt {
+	font-family: "Noto Sans KR";
 }
 
-.post-full-content {
-	font-family: "Noto Serif KR", serif;
+.post-card-excerpt p,
+.post-full-content p,
+.post-full-content blockquote,
+.post-full-content li {
+	font-family: "Noto Sans KR";
+	font-weight: 400;
 }
 
 .post-full-header {
-	font-family: "Noto Sans KR", sans-serif;
+	font-family: "Noto Sans KR";
+	font-weight: 500;
 }
 
 /* article */
@@ -32,23 +39,24 @@
 .post-full-content h3,
 .post-full-content h4,
 .post-full-content h5,
-.post-full-content h6 {
-	font-family: "Noto Sans KR", sans-serif;
-	font-weight: 400;
+.post-full-content h6,
+.post-full-content strong {
+	font-family: "Noto Sans KR";
+	font-weight: 500;
 }
 
 .post-full-title {
-	font-family: "Noto Sans KR", sans-serif;
+	font-family: "Noto Sans KR";
+	font-weight: 500;
 }
 
 /* floating-header */
 .floating-header {
-	font-family: "Noto Sans KR", sans-serif;
+	font-family: "Noto Sans KR";
 }
 
 .floating-header-title,
 .floating-header span {
-	font-weight: 400;
 }
 
 .floating-header-logo {
@@ -64,11 +72,23 @@
 	display: none;
 }
 
+.post-card-byline-content {
+	margin: 0
+}
+
+.post-card-byline-content span {
+	margin: 0;
+}
+
+.site-description {
+	padding: 20px 0;
+}
+
 /* footer */
 .site-footer {
-	font-family: "Noto Sans KR", sans-serif;
+	font-family: "Noto Sans KR";
 }
 
 .read-next-feed {
-	font-family: "Noto Sans KR", sans-serif;
+	font-family: "Noto Sans KR";
 }
